@@ -1,0 +1,11 @@
+@charset "ISO-8859-1";
+
+.main{
+	width:500px;
+	background-color:pink;
+}
+input
+{
+	width:450px;
+	height:40px;
+}
