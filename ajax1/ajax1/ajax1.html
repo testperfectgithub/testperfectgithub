@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            display: grid;
+            grid-template-columns: 200px 200px 200px 200px;
+            column-gap: 100px;
+            row-gap: 300px;
+            margin-left: 35px;
+        }
+        div
+        {
+            width: 250px;
+            height: 900px;
+        }
+        #a
+        {
+            position: absolute;
+            top: 850px;
+            bottom: 10px;
+            z-index: 5;
+        }
+        button
+        {
+            width: 250px;
+            height: 40px;
+            background-color: grey;
+        }
+    </style>
+</head>
+<body>
+    <div id="1"></div>
+    <div id="2"></div>
+    <div id="3"></div>
+    <div id="4"></div>
+    <div id="5"></div>
+    <div id="6"></div>
+    <div id="7"></div>
+    <div id="8"></div>
+    <div id="9"></div>
+    <div id="10"></div>
+    <div id="11"></div>
+    <div id="12"></div>
+    <div id="13"></div>
+    <div id="14"></div>
+    <div id="15"></div>
+    <div id="16"></div>
+    <div id="17"></div>
+    <div id="18"></div>
+    <div id="19"></div>
+    <div id="20"></div>
+    <script>
+        let ajax=new XMLHttpRequest();
+        ajax.open("GET","https://fakestoreapi.com/products")
+        ajax.send();
+        ajax.onload= ()=>
+        {
+            let data = JSON.parse(ajax.response)
+           
+            {
+                let count=1;
+                var item=0;
+                data.forEach(element =>
+               {
+                //item=document.getElementById(count).value=${count};
+                document.getElementById(count).innerHTML=(`<table style='border:2px solid black;width:250px;text-align:center'><tr><td style='width:130px;height:120px;'><img style='width:100px' src='${element.image}'</td></tr>
+                   <tr> <td style='width:200px;height:20px;'>${element.id}</td></tr>
+                   <tr> <td style='width:200px;height:20px;'><h2 style='color:green;'>---Title---</td></tr>
+                   <tr> <td style='width:200px;height:20px;'>${element.title}</td></tr>
+                   <tr> <td style='width:200px;height:20px;'><h2 style='color:green;'>---Price---</td></tr>
+                   <tr> <td style='width:200px;height:20px;'>${element.price}</td></tr>
+                   <tr> <td style='width:200px;height:20px;'><h2 style='color:green;'>---Description---</td></tr>
+                   <tr> <td style='width:200px;height:20px;'>${element.description}</td></tr>
+                   <tr> <td style='width:200px;height:20px;'><h3 style='color:green;'>---Catagory---</td></tr>
+                   <tr> <td style='width:200px;height:20px;'>${element.category}</td></tr>
+                   <tr> <td style='width:200px;height:20px;'><h3 style='color:pink;'>---Rating---</td></tr>
+                   <tr> <td style='width:200px;height:20px;'>${element.rating.rate}</td></tr>
+                   <tr> <td style='width:200px;height:20px;'><h3 style='color:purple;'>---Rating-Count---</td></tr>
+                   <tr> <td style='width:200px;height:20px;'>${element.rating.count}</td></tr>
+                   <tr> <td style='width:200px;height:20px;'><a href='final.html'><button style='font-size:20px;' id='${item++}' onClick='reload${item}()'><b>Add To Cart</b></button><a></td></tr>
+                    <table>`);
+                        //console.log(item);
+                     //item++;
+                     count++;
+                    
+               });
+                
+            }
+        }
+        function reload1() {
+            //let a=document.getElementById(1).value="1";
+            sessionStorage.setItem("one",1);
+        }
+        function reload2() {
+            let a=document.getElementById(2).value="2";
+            sessionStorage.setItem("one",2);
+        }
+        function reload3() {
+            //let a=document.getElementById(5).innerHTML='';
+            sessionStorage.setItem("one",3);
+
+        }
+        function reload4() {
+            //let a=document.getElementById(5).innerHTML='';
+            sessionStorage.setItem("one",4);
+
+        }
+        function reload5() {
+            //let a=document.getElementById(5).innerHTML='';
+            sessionStorage.setItem("one",5);
+
+        }
+        function reload6() {
+            //let a=document.getElementById(5).innerHTML='';
+            sessionStorage.setItem("one",6);
+
+        }
+        function reload7() {
+            //let a=document.getElementById(5).innerHTML='';
+            sessionStorage.setItem("one",7);
+
+        }
+        function reload8() {
+            //let a=document.getElementById(5).innerHTML='';
+            sessionStorage.setItem("one",8);
+
+        }
+        function reload9() {
+            //let a=document.getElementById(5).innerHTML='';
+            sessionStorage.setItem("one",9);
+
+        }
+        function reload10() {
+            //let a=document.getElementById(5).innerHTML='';
+            sessionStorage.setItem("one",10);
+
+        }
+        function reload11() {
+           // let a=document.getElementById(5).innerHTML='';
+            sessionStorage.setItem("one",11);
+
+        }
+        function reload12() {
+            //let a=document.getElementById(5).innerHTML='';
+            sessionStorage.setItem("one",12);
+        }
+        function reload13() {
+            //let a=document.getElementById(5).innerHTML='';
+            sessionStorage.setItem("one",13);
+
+        }
+        function reload14() {
+            //let a=document.getElementById(5).innerHTML='';
+            sessionStorage.setItem("one",14);
+
+        }
+        function reload15() {
+            //let a=document.getElementById(5).innerHTML='';
+            sessionStorage.setItem("one",15);
+
+        }
+        function reload16() {
+            //let a=document.getElementById(5).innerHTML='';
+            sessionStorage.setItem("one",16);
+
+        }
+        function reload17() {
+            //let a=document.getElementById(5).innerHTML='';
+            sessionStorage.setItem("one",17);
+
+        }
+        function reload18() {
+            //let a=document.getElementById(5).innerHTML='';
+            sessionStorage.setItem("one",18);
+
+        }
+        function reload19() {
+            //let a=document.getElementById(5).innerHTML='';
+            sessionStorage.setItem("one",19);
+
+        }
+        function reload20() {
+            //let a=document.getElementById(5).innerHTML='';
+            sessionStorage.setItem("one",20);
+
+        }
+    </script>
+</body>
+</html>

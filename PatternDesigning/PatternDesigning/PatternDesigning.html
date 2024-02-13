@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300&display=swap');
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    line-height: 1.6;
+}
+h1{
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin: 40px 0 60px 0;
+}
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+}
+#search-input{
+width: 60%;
+max-width: 400px;
+padding: 10px 20px;
+border: none;
+box-shadow: 0 0 6px rgba(0,0, 0, 0.2);
+border-radius: 5px;
+font-size: 18px;
+color: #333;
+}
+#search-button{
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    border: none;
+    font-size: 18px;
+    box-shadow: 0 0 6px rgba(0,0, 0, 0.2);
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+.search-results{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.search-result{
+    margin-bottom: 60px;
+    width: 30%;
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 6px rgba(0,0, 0, 0.2);
+    overflow: hidden;
+}
+.search-result img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition:opacity 0.2s ease-in-out;
+}
+.search-result:hover img{
+opacity: 0.8;
+}
+.search-result a{
+    font-size: 20px;
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 10px;
+    text-transform: capitalize;
+}
+#show-more-button{
+    background-color: #008cba;
+    font-size: 18x;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    display: block;
+    margin: 30px auto;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+
+    </style>
+
+<body>
+    
+    <h1>Image Search App</h1>
+    <form action="">
+        <input type="text" id="search-input" placeholder="search for images"  >
+        <button id="search-button" >Search</button>
+    </form>
+    <div class="search-results">
+<div class="search-result">
+    <img src="https://cdn.wallpapersafari.com/15/32/4mkaxP.jpg"  alt="Mounts under the sky">
+    <a href="https://www.bing.com/images/search?view=detailV2&ccid=bgK2Gjt2&id=3B9437411AE1C802A3D2EA1573CC51688194F869&thid=OIP.bgK2Gjt2vi6bOzU7YZ1FOQHaLH&mediaurl=https%3a%2f%2fcdn.wallpapersafari.com%2f15%2f32%2f4mkaxP.jpg&exph=1500&expw=1000&q=unsplash.com&simid=608007592639608923&FORM=IRPRST&ck=F63ACDC9228BD9DEC84E081BA5B8EDDA&selectedIndex=93&itb=0&ajaxhist=0&ajaxserp=0" target="_blank">Mounts under the sky</a>
+
+</div>
+<div class="search-result">
+    <img src="https://cdn.wallpapersafari.com/15/32/4mkaxP.jpg"  alt="Mounts under the sky">
+    <a href="https://www.bing.com/images/search?view=detailV2&ccid=bgK2Gjt2&id=3B9437411AE1C802A3D2EA1573CC51688194F869&thid=OIP.bgK2Gjt2vi6bOzU7YZ1FOQHaLH&mediaurl=https%3a%2f%2fcdn.wallpapersafari.com%2f15%2f32%2f4mkaxP.jpg&exph=1500&expw=1000&q=unsplash.com&simid=608007592639608923&FORM=IRPRST&ck=F63ACDC9228BD9DEC84E081BA5B8EDDA&selectedIndex=93&itb=0&ajaxhist=0&ajaxserp=0" target="_blank">Mounts under the sky</a>
+
+</div>
+<div class="search-result">
+    <img src="https://cdn.wallpapersafari.com/15/32/4mkaxP.jpg"  alt="Mounts under the sky">
+    <a href="https://www.bing.com/images/search?view=detailV2&ccid=bgK2Gjt2&id=3B9437411AE1C802A3D2EA1573CC51688194F869&thid=OIP.bgK2Gjt2vi6bOzU7YZ1FOQHaLH&mediaurl=https%3a%2f%2fcdn.wallpapersafari.com%2f15%2f32%2f4mkaxP.jpg&exph=1500&expw=1000&q=unsplash.com&simid=608007592639608923&FORM=IRPRST&ck=F63ACDC9228BD9DEC84E081BA5B8EDDA&selectedIndex=93&itb=0&ajaxhist=0&ajaxserp=0" target="_blank">Mounts under the sky</a>
+
+</div>
+    </div>
+    <button id="show-more-button" >Show more
+
+    </button>
+    <script>
+const accessKey="RBP-Iq782a5sh7fvuZiO2NSq_bC4iScw-lSQjRLW9Og";
+const formE1=document.querySelector("form");
+const inputE1=document.getElementById("search-input");
+const searchResults=document.querySelector(".search-results");
+const showMore=document.getElementById("show-more-button");
+let inputData="";
+let page=1;
+async function searchImages(){
+    inputData=inputE1.value;
+    const url=`https://api.unsplash.com/search/photos?page=${page}&query=${inputData}&client_id=${accessKey}`;
+const response=await fetch(url)
+const data=await response.json()
+const results=data.results
+if(page===1){
+    searchResults.innerHTML=""
+}
+results.map((result)=>{
+    const imageWrapper=document.createElement("div");
+    imageWrapper.classList.add("search-result");
+    const image=document.createElement("img");
+    image.src=result.urls.small;
+    image.alt=result.alt_description;
+    const imageLink=document.createElement("a");
+    imageLink.href=result.links.html;
+    imageLink.target="_blank";
+    imageLink.textContent=result.alt_description;
+
+    imageWrapper.appendChild(image);
+    imageWrapper.appendChild(imageLink);
+    searchResults.appendChild(imageWrapper);
+});
+   page++;
+   if(page>1){
+    showMore.style.display="block";
+   }
+}
+
+   formE1.addEventListener("submit",(event)=>{
+    event.preventDefault();
+    page=1;
+    searchImages()
+   });
+   showMore.addEventListener("click",()=>{
+    searchImages()
+   });
+    </script>
+      </body>
+    </html>
+</body>
+</html>

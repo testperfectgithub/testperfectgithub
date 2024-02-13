@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let ajax=new XMLHttpRequest();
+        ajax.open("GET","https://api.github.com/users");
+        ajax.send();
+        ajax.onload=()=>{
+let data=JSON.parse(ajax.response)
+data.forEach(element => {
+    document.write(`<center><table style="border:2px solid black; border-collapse:collapse;">
+        <tr>
+            <th style="border:2px solid black;width:100px;height:100px;">${element.id}</th>
+            <th style="border:2px solid black;width:100px;height:100px;">${element.login}</th> 
+            <th style="border:2px solid black;width:100px;height:100px;"><img style='width:150px' src='${element.avatar_url}'></th>
+           </tr> 
+           </table></center>'
+            `)
+});
+        }
+    </script>
+</body>
+</html>
