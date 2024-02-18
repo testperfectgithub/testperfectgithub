@@ -6,7 +6,7 @@
 
 <img src="https://user-images.githubusercontent.com/74038190/229223263-cf2e4b07-2615-4f87-9c38-e37600f8381a.gif" alt="coding" align="right" width="600px" >
 
-<img src="https://cdnl.iconscout.com/lottie/premium/preview-watermark/online-ticket-booking-9010449-7330120.mp4" alt="coding" align="right" width="600px">
+<img src="https://cdnl.iconscout.com/lottie/premium/preview-watermark/online-ticket-booking-9010449-7330120.mp4" alt="coding" align="right" width="400px">
 
 - 🔭 I’m currently working on [HotelManagementSystem]("C:\Users\bala9\Downloads\demo\HotelManagementSystem")
 
